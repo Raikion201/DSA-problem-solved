@@ -6,8 +6,8 @@ public class Solution {
             int mid = (l + r) / 2;
             int curr = h;
             for (int i = 0 ; i < piles.Length ; i++){
-                if( piles[i] == mid){
-                    curr -= 1;
+                if( piles[i] % mid == 0){
+                    curr -= piles[i] / mid ;
                 }else{
                 curr -=  ( piles[i] / mid ) + 1 ;
                 }
